@@ -1,0 +1,38 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff9800;
+    padding: 15px 40px;
+    color: white;
+    font-weight: bold;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .language-switcher {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .content {
+    padding: 30px;
+    min-height: 80vh;
+    background-color: #fff;
+  }
+  
+  .footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
