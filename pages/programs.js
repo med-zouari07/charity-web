@@ -9,7 +9,6 @@ export default function Programs() {
           <li>👶 Orphan Care — providing shelter, education, and family support.</li>
           <li>🏥 Medical Assistance — health checkups, medication, and awareness.</li>
           <li>🎓 Education Support — school fees, supplies, and tutoring.</li>
-          <li>🍞 Food Distribution — regular food drives for low-income families.</li>
         </ul>
       </section>
     </Layout>
