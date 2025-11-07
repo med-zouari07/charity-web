@@ -10,17 +10,17 @@ export default function Home() {
       {/* Hero Section */}
       <header className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1>{t("title")}</h1>
-          <p>{t("subtitle")}</p>
+          <h1>{t("title", "Helping Hands Charity")}</h1>
+          <p>{t("subtitle", "Together we bring hope and support to those in need.")}</p>
           <a href="/donate" className={styles.ctaButton}>
-            {t("donate")}
+            {t("donate", "Donate Now")}
           </a>
         </div>
       </header>
 
       {/* Mission Section */}
-      <section className={styles.section}>
-        <h2>{t("mission")}</h2>
+      <section id="mission" className={styles.section}>
+        <h2>{t("mission", "Our Mission")}</h2>
         <p>
           {t("missionText", "We work to provide education, healthcare, and emotional support for orphans and families living in poverty.")}
         </p>
@@ -28,7 +28,7 @@ export default function Home() {
 
       {/* Programs Section */}
       <section className={styles.sectionAlt}>
-        <h2>{t("programs")}</h2>
+        <h2>{t("programs", "Our Programs")}</h2>
         <ul>
           <li>👶 {t("orphanCare", "Orphan Care — providing shelter, education, and family support.")}</li>
           <li>🏥 {t("medicalAssistance", "Medical Assistance — health checkups, medication, and awareness.")}</li>

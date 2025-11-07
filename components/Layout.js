@@ -1,34 +1,32 @@
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
 import styles from "../styles/Layout.module.css";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 export default function Layout({ children }) {
-  const { t, i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
-  const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-    document.dir = lang === "ar" ? "rtl" : "ltr";
-  };
+  // Switch RTL for Arabic
+  useEffect(() => {
+    document.dir = i18n.language === "ar" ? "rtl" : "ltr";
+  }, [i18n.language]);
 
   return (
-    <div>
+    <>
       <nav className={styles.navbar}>
-        <div className={styles.logo}>{t("title")}</div>
-        <div className={styles.links}>
-          <Link href="/">{t("mission")}</Link>
-          <Link href="/about">{t("about")}</Link>
-          <Link href="/contact">{t("contact")}</Link>
-          <button onClick={() => changeLanguage("en")}>🇬🇧 EN</button>
-          <button onClick={() => changeLanguage("fr")}>🇫🇷 FR</button>
-          <button onClick={() => changeLanguage("ar")}>🇸🇦 AR</button>
+        <div>Helping Hands Charity</div>
+        <div className={styles.navLinks}>
+          <a href="#mission">{t("mission", "Our Mission")}</a>
+          <a href="#about">{t("about", "About Us")}</a>
+          <a href="#contact">{t("contact", "Contact")}</a>
+          <div className={styles.langSwitcher}>
+            <button className={styles.langButton} onClick={() => i18n.changeLanguage("en")}>🇬🇧 EN</button>
+            <button className={styles.langButton} onClick={() => i18n.changeLanguage("fr")}>🇫🇷 FR</button>
+            <button className={styles.langButton} onClick={() => i18n.changeLanguage("ar")}>🇸🇦 AR</button>
+          </div>
         </div>
       </nav>
 
-      <main className={styles.content}>{children}</main>
-
-      <footer className={styles.footer}>
-        <p>© {new Date().getFullYear()} Helping Hands Charity</p>
-      </footer>
-    </div>
+      <main>{children}</main>
+    </>
   );
 }
