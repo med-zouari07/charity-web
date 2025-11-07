@@ -63,13 +63,6 @@ export default function Home() {
               "Education Support — school fees, supplies, and tutoring."
             )}
           </li>
-          <li>
-            🍞{" "}
-            {t(
-              "foodDistribution",
-              "Food Distribution — regular food drives for low-income families."
-            )}
-          </li>
         </ul>
         <Link href="/programs" className={styles.ctaButton}>
           {t("seePrograms", "See All Programs")}
