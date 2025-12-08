@@ -4,8 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ff9800;
-  color: white;
+  background-color: #0b1d51; /* dark blue */
+  color: #ffffff; /* text color white */
   padding: 15px 40px;
   font-weight: bold;
   flex-wrap: wrap;
@@ -24,14 +24,17 @@
 }
 
 .langButton {
-  background: white;
-  color: #ff9800;
+  background: #ffffff; /* white button background */
+  color: #0b1d51; /* dark blue text */
   border: none;
   padding: 6px 10px;
   border-radius: 5px;
   font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
 }
 
 .langButton:hover {
-  background: #ffe0b2;
+  background: #0b1d51; /* dark blue on hover */
+  color: #ffffff; /* white text on hover */
 }
